@@ -3,8 +3,9 @@
 using namespace std;
 
 int main() {
-    Ray::ray<float> a(1, 1, 1, 100);
-    cout << a << endl;
+	Ray::vector<float> a(1, 2, 3);
+	Ray::vector<float> b(4, 3, 2);
+	cout << a * b << endl;
 
-    return 0;
+	return 0;
 }
