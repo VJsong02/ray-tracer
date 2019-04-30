@@ -1,11 +1,13 @@
-#include <iostream>
 #include "ray.h"
-using namespace std;
+#include <iostream>
 
-int main() {
+int main()
+{
 	Ray::vector<float> a(1, 2, 3);
 	Ray::vector<float> b(4, 3, 2);
-	cout << a * b << endl;
+	Ray::vector<float> sum = a + b;
+	std::cout << a << std::endl;
+	std::cout << sum << std::endl;
 
 	return 0;
 }
