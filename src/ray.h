@@ -7,15 +7,17 @@ namespace Ray
 	template <typename T>
 	class object {
 		
-	}
+	};
 
 	template <typename T>
 	class vector
 	{
 	protected:
-		T dim[3]; // Vector dimensions
+		T dim[3] = {0, 0, 0}; // Vector dimensions
 
 	public:
+		vector() {}
+
 		vector(T x, T y, T z) // Construct vector
 		{
 			dim[0] = x;
@@ -45,6 +47,8 @@ namespace Ray
 		unsigned char brightness; // ray brightness 0 - 100
 
 	public:
+		ray() : vector() {}
+
 		ray(T x, T y, T z, unsigned char b)
 			: vector<T>(x, y, z)
 		{
