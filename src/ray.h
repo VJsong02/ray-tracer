@@ -5,11 +5,6 @@
 namespace Ray
 {
 	template <typename T>
-	class object {
-		
-	};
-
-	template <typename T>
 	class vector
 	{
 	protected:
@@ -38,6 +33,11 @@ namespace Ray
 		{
 			return vector<T>(this->x() + v.x(), this->y() + v.y(), this->z() + v.z());
 		}
+	};
+	
+	template <typename T>
+	class object {
+		vector<T> location;
 	};
 
 	template <typename T>
@@ -68,7 +68,7 @@ namespace Ray
 			return os << "(" << r.x() << " " << r.y() << " " << r.z() << ") " << +r.brightness() << "%";
 		}
 
-		bool trace() {
+		bool trace(T increment) {
 			
 		}
 	};
