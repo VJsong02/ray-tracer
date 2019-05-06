@@ -8,9 +8,9 @@
 
 int main()
 {
-	Ray::vector<double> a(1, 2, 3);
+	Ray::ray<double> a(1, 2, 3, 100);
 	Ray::vector<double> b(2, 3, 4);
-	Ray::vector<double> c = a + b;
+	Ray::vector<double> c = Ray::functions::reflect(a, b);
 
 	std::cout << c << std::endl;
 

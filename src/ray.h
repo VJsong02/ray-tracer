@@ -96,6 +96,7 @@ class ray : public vector<T>
 
 	bool trace(T increment)
 	{
+		return true;
 	}
 };
 
@@ -125,6 +126,7 @@ ray<T> reflect(ray<T> &a, vector<T> &b)
 template <typename T>
 bool refract(ray<T> &a, vector<T> &b)
 {
+	return ray<T>(1, 1, 1, 100); //TODO
 }
 } // namespace functions
 } // namespace Ray
