@@ -24,22 +24,15 @@ class vector
 	T y() { return dim[1]; }
 	T z() { return dim[2]; }
 
-	void set(T x, T y, T z)
-	{
-		dim[0] = x;
-		dim[1] = y;
-		dim[2] = z;
-	}
-
 	friend std::ostream &operator<<(std::ostream &os, vector<T> &v)
 	{
 		os << "(" << v.x() << " " << v.y() << " " << v.z() << ")";
 		return os;
 	}
 
-	vector<T> operator+(const vector<T> &v)
+	vector<T> operator+(vector<T> &v)
 	{
-		return vector<T>(this->x() + *v.x(), this->y() + *v.y(), this->z() + *v.z());
+		return vector<T>(this->x() + v.x(), this->y() + v.y(), this->z() + v.z());
 	}
 
 	vector<T> operator-(vector<T> &v)
@@ -86,14 +79,6 @@ class ray : public vector<T>
 		: vector<T>(v.x(), v.y(), v.z())
 	{
 		brightness = b;
-	}
-
-	void set(T x, T y, T z, unsigned char brightness)
-	{
-		dim[0] = x;
-		dim[1] = y;
-		dim[2] = z;
-		b = brightness;
 	}
 
 	vector<T> strip()
