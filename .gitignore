@@ -1,4 +1,5 @@
 .vscode/
 *.out
+*.exe
 Ray tracer.code-workspace
 CImg.h
